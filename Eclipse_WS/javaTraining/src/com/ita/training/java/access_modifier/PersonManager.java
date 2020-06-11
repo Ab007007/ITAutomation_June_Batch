@@ -9,8 +9,9 @@ package com.ita.training.java.access_modifier;
 
 class Person {
 	String name;
+	double weight;
+	int age;
 	static String country = "India";
-	
 	final static String livesOn = "Earth";
 	
 	
@@ -20,6 +21,14 @@ class Person {
 	}
 	
 	
+	public String toString() {
+		String str = null;
+		str = "The Person class has Name " + this.name + " Weight " + this.weight
+				+ " Age " + this.age + " Country " + country + " and lives on " + livesOn ;
+		
+		return str;
+		
+	}
 }
 
 
@@ -31,21 +40,15 @@ public class PersonManager {
 		Person p2 = new Person();
 		
 		p1.name = "Aravinda";
+		p1.age = 35;
+		p1.weight = 75;
+				
 		p2.name = "Ravi";
-		p1.country = "USA";
+		p2.age = 34;
+		p2.weight = 70;
 		
-		System.out.println(p1.name);
-	//	System.out.println(p1.country);
-		System.out.println(Person.country);
-		
-		System.out.println("------------------------------Person2-------------");
-		System.out.println(p2.name);
-		System.out.println(p2.country);
-		
-		Person.test();
-	
-		
-		
+		System.out.println(p1);
+		System.out.println(p2);
 	}
 
 }
