@@ -13,9 +13,17 @@ public class StringSamplePrograms
 		System.out.println(d.toString());
 	}
 	
+	/**
+	 * this is a function to validate a given string is palindrome or not
+	 * @param str
+	 */
 	public static void palidndrome(String str)
 	{
-		String revStr = reverseString(str);
+		// Reverse the given string and store it in a variable 
+		String revStr = reverseString(str); 
+		
+		// Compare the string passed by user with reverse string 
+		//If same print palindrome else not
 		if (str.equalsIgnoreCase(revStr)) {
 			System.out.println("Given String is Palindrome");
 		}
@@ -23,8 +31,16 @@ public class StringSamplePrograms
 			System.out.println("Given String is not a Palindrome");
 		}
 	}
+	
+	/**
+	 * replace all char 
+	 * @param str -  given string 
+	 * @param from - character / string to replace
+	 * @param to - character / string to be replaced
+	 */
 	public static void replaceAllChar(String str, String from, String to)
 	{
+		// bultin function replaceAll is called 
 		str = str.replaceAll(from,to);
 		System.out.println(str);
 	}
