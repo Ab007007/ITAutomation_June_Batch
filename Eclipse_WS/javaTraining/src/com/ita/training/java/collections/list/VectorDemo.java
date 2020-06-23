@@ -1,18 +1,20 @@
-package com.ita.training.java.collections;
+package com.ita.training.java.collections.list;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Vector;
 
-public class ArrayListDemo {
+public class VectorDemo {
 
 	public static void main(String[] args)
 	{
-		List al =  new ArrayList();
-		List al2 = new ArrayList();
+		List al =  new Vector();
+		List al2 = new Vector();
 		al2.add("one");
 		al2.add("one");
 		al2.add("one");
+		
+	
 		al2.add(null);
 		
 		al.add(123);

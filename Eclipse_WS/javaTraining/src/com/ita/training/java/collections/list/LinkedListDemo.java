@@ -1,4 +1,4 @@
-package com.ita.training.java.collections;
+package com.ita.training.java.collections.list;
 
 import java.util.Iterator;
 import java.util.LinkedList;
