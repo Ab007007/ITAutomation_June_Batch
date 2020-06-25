@@ -27,6 +27,8 @@ public class Addition {
 		printResult();
 	}
 	
+	
+	
 	static void printResult()
 	{
 		System.out.println("Result after operation " + c);
