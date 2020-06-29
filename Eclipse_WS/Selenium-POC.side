@@ -1,0 +1,365 @@
+{
+  "id": "48afe140-3449-4e90-bc6b-cc8a10e176aa",
+  "version": "2.0",
+  "name": "Selenium-POC",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "76965a29-51f8-4cd4-803d-171491fef7e8",
+    "name": "TestCase1",
+    "commands": [{
+      "id": "538974fa-1ece-4c3f-bc92-77ceb083c8d6",
+      "comment": "",
+      "command": "open",
+      "target": "/login.do",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2020aa3e-b1a2-4214-8b6a-a76389dfc2cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "e385b21a-1684-437a-a329-3c2ab87f3022",
+      "comment": "",
+      "command": "click",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.pwdfield", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a34d7843-ddf0-4cbf-b22c-e2d659b144b0",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.pwdfield", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/input", "xpath:position"]
+      ],
+      "value": "manager"
+    }, {
+      "id": "8e9b65b8-0f3f-41a6-9382-545fa8ad07e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#loginButton > div",
+      "targets": [
+        ["css=#loginButton > div", "css:finder"],
+        ["xpath=//a[@id='loginButton']/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dad9446-f615-4506-87ba-d21ba8dae98d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View Time-Track",
+      "targets": [
+        ["linkText=View Time-Track", "linkText"],
+        ["css=.secondLevelNavigationItem:nth-child(2) > .item", "css:finder"],
+        ["xpath=//a[contains(text(),'View Time-Track')]", "xpath:link"],
+        ["xpath=//table[@id='topnav']/tbody/tr[2]/td[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/user/view_tt.do')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Time-Track')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5e68f8f-1b85-4591-8fe3-47a5dcd01afe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.customLeftPart",
+      "targets": [
+        ["css=.customLeftPart", "css:finder"],
+        ["xpath=//table[@id='ext-comp-1004']/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td/div/table/tbody/tr/td/table/tbody/tr/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f9e7aba-8ad5-469a-9ef1-7295dde81d43",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ext-gen106 .rangeItemTitle",
+      "targets": [
+        ["css=#ext-gen106 .rangeItemTitle", "css:finder"],
+        ["xpath=//a[@id='ext-gen106']/span/div[2]", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0d9fba8-2ddb-4940-81e5-211b0d082488",
+      "comment": "",
+      "command": "click",
+      "target": "id=logoutLink",
+      "targets": [
+        ["id=logoutLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#logoutLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='logoutLink']", "xpath:attributes"],
+        ["xpath=//table[@id='topnav']/tbody/tr/td[6]/table/tbody/tr/td[2]/div/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout.do')]", "xpath:href"],
+        ["xpath=//td[2]/div/table/tbody/tr/td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "47351a16-7e8a-44e2-9aaa-d8a1f2447e28",
+    "name": "LoginWithValidation",
+    "commands": [{
+      "id": "2f1ce51c-e45c-416c-9d46-1145c204c5c3",
+      "comment": "",
+      "command": "open",
+      "target": "/login.do",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa8db99a-e700-42c0-b3eb-16c857828f24",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "actiTIME - Login123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d3199f4-43fb-438c-b0b0-2d363b7d97fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5447d72-3e89-44e1-a686-843f60ed9929",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "42e7633c-b3f5-44d7-9257-3991059f0ac2",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.pwdfield", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/input", "xpath:position"]
+      ],
+      "value": "manager"
+    }, {
+      "id": "c7c60c92-384c-4d7a-9636-377ba870a9d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#loginButton > div",
+      "targets": [
+        ["css=#loginButton > div", "css:finder"],
+        ["xpath=//a[@id='loginButton']/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8157fdb3-7b79-4515-9986-b20433da92d9",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "actiTIME - Enter Time-Track",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea8809ab-981d-4dd7-bbb8-8de66b97b8ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tasks > .img",
+      "targets": [
+        ["css=.tasks > .img", "css:finder"],
+        ["xpath=//table[@id='topnav']/tbody/tr/td[3]/a/div[2]", "xpath:idRelative"],
+        ["xpath=//td[3]/a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f26c329c-1b27-40e7-8f6c-72b44766bf45",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "actiTIME - Task List",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1e0c8f6-cd5d-4d72-b79b-a911e3f7e0ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=logoutLink",
+      "targets": [
+        ["id=logoutLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#logoutLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='logoutLink']", "xpath:attributes"],
+        ["xpath=//table[@id='topnav']/tbody/tr/td[6]/table/tbody/tr/td[2]/div/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout.do')]", "xpath:href"],
+        ["xpath=//td[2]/div/table/tbody/tr/td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6484213-5c42-4182-9370-85c09b6a66d6",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "actiTIME - Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "36f21573-3ade-4e41-b86f-b2c6a330c729",
+    "name": "AssertDemo",
+    "commands": [{
+      "id": "b93f5e88-b69d-4bf6-ac37-33139191a8bf",
+      "comment": "",
+      "command": "open",
+      "target": "/login.do",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "621a8b77-ed8d-4a46-acec-977604bde8a4",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "actiTIME - Login123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32eb7eb3-ce73-484c-91ee-406610c92ca4",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc9a90cf-74a8-49f0-aa8f-892def449a86",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "d712cb4c-a49c-402e-b5f0-172897dc016b",
+      "comment": "",
+      "command": "type",
+      "target": "name=pwd",
+      "targets": [
+        ["name=pwd", "name"],
+        ["css=.pwdfield", "css:finder"],
+        ["xpath=//input[@name='pwd']", "xpath:attributes"],
+        ["xpath=//table[@id='loginFormContainer']/tbody/tr/td/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/input", "xpath:position"]
+      ],
+      "value": "manager"
+    }, {
+      "id": "2b226f0c-ec19-42f5-afd7-de0a21c88daf",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginButton",
+      "targets": [
+        ["id=loginButton", "id"],
+        ["linkText=Login", "linkText"],
+        ["css=#loginButton", "css:finder"],
+        ["xpath=//a[@id='loginButton']", "xpath:attributes"],
+        ["xpath=//td[@id='loginButtonContainer']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:void(0)')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e69906ad-e2dc-476a-b3e1-cd588b9fcd77",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "actiTIME - Enter Time-Track",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be4f789f-2ab5-45d3-9a3d-85b9dd1869f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=logoutLink",
+      "targets": [
+        ["id=logoutLink", "id"],
+        ["linkText=Logout", "linkText"],
+        ["css=#logoutLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@id='logoutLink']", "xpath:attributes"],
+        ["xpath=//table[@id='topnav']/tbody/tr/td[6]/table/tbody/tr/td[2]/div/table/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout.do')]", "xpath:href"],
+        ["xpath=//td[2]/div/table/tbody/tr/td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4086441-bf9e-40dd-9969-791c357a1e4b",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "actiTIME - Login",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "265c6e56-f388-4fd4-9ff0-f0c8b1e28a90",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["76965a29-51f8-4cd4-803d-171491fef7e8"]
+  }, {
+    "id": "d336e184-33e6-477f-960a-632ae3e56711",
+    "name": "Sanity",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["36f21573-3ade-4e41-b86f-b2c6a330c729", "47351a16-7e8a-44e2-9aaa-d8a1f2447e28", "76965a29-51f8-4cd4-803d-171491fef7e8"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}
