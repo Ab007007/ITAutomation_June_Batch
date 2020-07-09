@@ -7,8 +7,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ActitimeUtils extends DriverUtils {
 
-	public static void launcApp(String url) {
-		driver.get(url);
+	public static void launcApp(String... args) {
+		if(args.length > 0)
+		{
+			System.out.println("Launching app with url " + args[0]);
+			driver.get(args[0]);
+		}
+		else
+		{
+			System.out.println("Launching default actitime application");
+			driver.get("http://localhost/login.do");
+		}
 		validateTitle("actiTIME - Login");
 	}
 
@@ -87,6 +96,21 @@ public class ActitimeUtils extends DriverUtils {
 		WebDriverWait waitDisappear = new WebDriverWait(driver, 10);
 		waitDisappear.until(ExpectedConditions.invisibilityOf(getElement("xpath", "//div[@class='toast']")));
 		System.out.println("Toast message disappeared!!!");
+		
+		
+	}
+	
+	public static void enterCustomerDetailsAndCancel(String cn)
+	{
+		type("id", "customerLightBox_nameField", cn);
+		type("id", "customerLightBox_descriptionField", cn);
+		click("id", "customerLightBox_cancelBtn");
+		
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().dismiss();
+		sleep(2000);
+		click("id", "customerLightBox_cancelBtn");
+		driver.switchTo().alert().accept();
 		
 		
 	}
