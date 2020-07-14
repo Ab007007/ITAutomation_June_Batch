@@ -91,10 +91,10 @@ public class ActitimeUtils extends DriverUtils {
 		type("id", "customerLightBox_descriptionField", cd);
 		click("id", "customerLightBox_commitBtn");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement successMsg = wait.until(ExpectedConditions.visibilityOf(getElement("xpath", "//div[@class='toast']")));
+		WebElement successMsg = wait.until(ExpectedConditions.visibilityOf(getElement("xpath", "//div[@class='toasts']")));
 		System.out.println("Success message is appeared "  + successMsg.getText());
 		WebDriverWait waitDisappear = new WebDriverWait(driver, 10);
-		waitDisappear.until(ExpectedConditions.invisibilityOf(getElement("xpath", "//div[@class='toast']")));
+		waitDisappear.until(ExpectedConditions.invisibilityOf(getElement("xpath", "//div[@class='toasts']")));
 		System.out.println("Toast message disappeared!!!");
 		
 		

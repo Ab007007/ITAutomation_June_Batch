@@ -6,6 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 
 public class DriverUtils {
 
@@ -18,11 +21,39 @@ public class DriverUtils {
 	public static WebDriver getDriver() {
 		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Integer.valueOf(ReaderUtils.getValue("timeout")), TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
 	}
 
+	
+	public static WebDriver getDriver(String type)
+	{
+		switch (type.toLowerCase()) {
+		case "chrome":
+			System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+			driver = new ChromeDriver();
+			break;
+		case "ff":
+			System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+			driver = new FirefoxDriver();
+			break;
+
+		case "edge":
+			System.setProperty("webdriver.edge.driver", "drivers\\");
+			driver = new EdgeDriver();
+			break;
+
+		case "opera":
+			System.setProperty("webdriver.opera.driver", "drivers\\geckodriver.exe");
+			driver = new OperaDriver();
+			break;
+
+		}
+		driver.manage().timeouts().implicitlyWait(Integer.valueOf(ReaderUtils.getValue("timeout")), TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		return driver;
+	}
 	/**
 	 * @author Aravind
 	 * @param type - any one out of 8 identifer=>id,name,classname,tagname,linktext
@@ -66,8 +97,7 @@ public class DriverUtils {
 
 		return ele;
 	}
-	
-	
+		
 	public static void click(String type, String typeValue)
 	{
 		System.out.println("Performing click operation on an element");
