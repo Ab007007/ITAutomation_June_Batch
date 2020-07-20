@@ -14,7 +14,7 @@ public class DropDownDemo {
 	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("http://formy-project.herokuapp.com/form");
+		ActitimeUtils.launchApp("http://formy-project.herokuapp.com/form");
 		
 		Select sel = new Select(driver.findElement(By.id("select-menu")));
 		

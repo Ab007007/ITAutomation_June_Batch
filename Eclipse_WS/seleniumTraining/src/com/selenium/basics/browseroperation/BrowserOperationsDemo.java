@@ -12,7 +12,7 @@ public class BrowserOperationsDemo {
 		WebDriver driver = ActitimeUtils.getDriver();
 		driver.manage().window().maximize();
 		
-		ActitimeUtils.launcApp("https://www.amazon.in/");
+		ActitimeUtils.launchApp("https://www.amazon.in/");
 		driver.findElement(By.xpath("//a[@aria-label='Televisions']")).click();
 		System.out.println(driver.getCurrentUrl());
 		driver.navigate().back();

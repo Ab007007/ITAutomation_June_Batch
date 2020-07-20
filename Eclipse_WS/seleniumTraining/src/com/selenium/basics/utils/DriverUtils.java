@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.testng.Assert;
 
 public class DriverUtils {
 
@@ -120,14 +121,8 @@ public class DriverUtils {
 	public static void validateTitle(String expectedTitle)
 	{
 		String actualTitle = driver.getTitle();
-		if(actualTitle.equals(expectedTitle))
-		{
-			System.out.println("PASS - title matched");
-		}
-		else
-		{
-			System.out.println("FAIL - Titile didnt match");
-		}
+	
+		Assert.assertEquals(actualTitle, expectedTitle);
 	}
 
 	

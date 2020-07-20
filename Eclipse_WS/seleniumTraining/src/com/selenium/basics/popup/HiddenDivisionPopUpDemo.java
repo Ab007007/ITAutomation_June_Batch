@@ -6,7 +6,7 @@ public class HiddenDivisionPopUpDemo {
 
 	public static void main(String[] args) {
 		ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp();
+		ActitimeUtils.launchApp();
 		ActitimeUtils.login("admin", "manager");
 		ActitimeUtils.type("xpath", "//span[text()='Status meetings']/ancestor::tr[contains(@id,'taskRow')]//td[@class='calendarWorkingDayNormal  ']//input[contains(@name,'spentStr[0]')]", "1");
 		ActitimeUtils.sleep(2000);

@@ -9,7 +9,7 @@ public class AlertsDemo extends ActitimeUtils
 	public static void main(String[] args) 
 	{
 		getDriver();
-		launcApp();
+		launchApp();
 		login("admin", "manager");
 		selectModule("tasks");
 		clickOnNewCustomerButton();

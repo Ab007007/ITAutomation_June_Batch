@@ -12,7 +12,7 @@ public class CreateCustomerTest {
 	{
 		
 		ActitimeUtils.getDriver(ReaderUtils.getValue("browser"));
-		ActitimeUtils.launcApp(ReaderUtils.getValue("url"));
+		ActitimeUtils.launchApp(ReaderUtils.getValue("url"));
 		ActitimeUtils.login(ReaderUtils.getValue("username"),ReaderUtils.getValue("password"));
 		ActitimeUtils.selectModule("tasks");
 	

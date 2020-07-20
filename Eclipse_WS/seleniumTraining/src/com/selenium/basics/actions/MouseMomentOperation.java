@@ -14,7 +14,7 @@ public class MouseMomentOperation {
 	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("http://flipkart.com/");
+		ActitimeUtils.launchApp("http://flipkart.com/");
 		
 		WebDriverWait wait =  new WebDriverWait(driver, 20);
 		WebElement loginPrompt = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//button[@class='_2AkmmA _29YdH8']"))));

@@ -15,7 +15,7 @@ public class MultiBrowserDemo {
 	public static void main(String[] args) {
 		
 		WebDriver driver = ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp();
+		ActitimeUtils.launchApp();
 		ActitimeUtils.login("admin", "manager");
 		ActitimeUtils.click("xpath", "//div[@class='popup_menu_label' and contains(text(),'Help')]");
 		ActitimeUtils.click("xpath", "//a[text()='User Guide']");

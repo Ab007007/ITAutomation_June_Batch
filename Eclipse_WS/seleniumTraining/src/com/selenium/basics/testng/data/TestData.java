@@ -23,14 +23,11 @@ public class TestData {
 	@DataProvider
 	  public Object[][] createcustomerdata() {
 	    return new Object[][] {
-	    	new Object[] { "ITA-TestNG-Cust1","ITA-TestNG-Cust1_Desc" },
-	    	new Object[] { "ITA-TestNG-Cust2","ITA-TestNG-Cust2_Desc" },
-	    	new Object[] { "ITA-TestNG-Cust3","ITA-TestNG-Cust3_Desc" },
-	    	new Object[] { "ITA-TestNG-Cust4","ITA-TestNG-Cust4_Desc" },
 	    	new Object[] { "ITA-TestNG-Cust5","ITA-TestNG-Cust5_Desc" },
 	    	new Object[] { "ITA-TestNG-Cust6","ITA-TestNG-Cust6_Desc" },
 	    	new Object[] { "ITA-TestNG-Cust7","ITA-TestNG-Cust7_Desc" },
-	    	new Object[] { "ITA-TestNG-Cust8","ITA-TestNG-Cust8_Desc" },
+	    	new Object[] { "ITA-TestNG-Cust8","ITA-TestNG-Cust8_Desc" }
+	 
 	    };
 	}
 	

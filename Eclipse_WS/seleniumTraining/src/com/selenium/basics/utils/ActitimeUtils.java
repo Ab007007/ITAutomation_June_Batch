@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ActitimeUtils extends DriverUtils {
 
-	public static void launcApp(String... args) {
+	public static void launchApp(String... args) {
 		if(args.length > 0)
 		{
 			System.out.println("Launching app with url " + args[0]);
@@ -34,11 +34,12 @@ public class ActitimeUtils extends DriverUtils {
 		}
 		validateTitle("actiTIME - Enter Time-Track");
 	}
-
+	
+	
 	public static void logout() {
 		System.out.println("Logging out of application");
 		click("id", "logoutLink");
-		driver.close();
+		//driver.close();
 
 	}
 

@@ -12,7 +12,7 @@ public class DragAndDropDemo {
 	public static void main(String[] args) {
 		
 		WebDriver driver =  ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("https://jqueryui.com/droppable/");
+		ActitimeUtils.launchApp("https://jqueryui.com/droppable/");
 		driver.switchTo().frame(0);
 		
 		WebElement src = driver.findElement(By.id("draggable"));

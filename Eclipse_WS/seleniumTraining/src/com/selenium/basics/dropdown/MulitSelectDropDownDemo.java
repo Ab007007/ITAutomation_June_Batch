@@ -12,7 +12,7 @@ public class MulitSelectDropDownDemo {
 	
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("file:///D:/ITA/ITAutomation_June_Batch/html/multiSelect.html");
+		ActitimeUtils.launchApp("file:///D:/ITA/ITAutomation_June_Batch/html/multiSelect.html");
 		
 		WebElement multiSelectDropDown = driver.findElement(By.tagName("select"));
 		

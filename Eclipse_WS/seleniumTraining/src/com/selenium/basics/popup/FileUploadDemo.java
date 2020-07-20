@@ -10,7 +10,7 @@ public class FileUploadDemo {
 	public static void main(String[] args) throws IOException {
 		Runtime.getRuntime().exec("D:\\ITA\\ITAutomation_June_Batch\\Eclipse_WS\\seleniumTraining\\autoit\\fileupload.exe");
 		ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("http://formy-project.herokuapp.com/fileupload");
+		ActitimeUtils.launchApp("http://formy-project.herokuapp.com/fileupload");
 		ActitimeUtils.click("id", "file-upload-field");
 		
 	}

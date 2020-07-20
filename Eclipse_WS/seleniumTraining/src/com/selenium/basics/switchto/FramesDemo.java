@@ -12,7 +12,7 @@ public class FramesDemo {
 	public static void main(String[] args) {
 		
 		WebDriver driver =  ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("https://jqueryui.com/droppable/");
+		ActitimeUtils.launchApp("https://jqueryui.com/droppable/");
 		//driver.switchTo().frame(0);
 		driver.switchTo().frame(ActitimeUtils.getElement("xpath", "//iframe[@class='demo-frame']"));
 		

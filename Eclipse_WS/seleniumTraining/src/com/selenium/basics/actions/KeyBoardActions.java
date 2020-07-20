@@ -12,7 +12,7 @@ public class KeyBoardActions {
 	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver =  ActitimeUtils.getDriver();
-		ActitimeUtils.launcApp("http://localhost/login.do");
+		ActitimeUtils.launchApp("http://localhost/login.do");
 		
 		Actions act = new Actions(driver);
 		act.sendKeys("admin").perform();
