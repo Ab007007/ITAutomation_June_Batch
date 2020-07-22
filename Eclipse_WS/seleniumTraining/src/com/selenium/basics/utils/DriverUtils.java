@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 
@@ -134,5 +135,21 @@ public class DriverUtils {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	
+	public static void moveMouse(String type, String typeValue)
+	{
+		Actions act = new Actions(driver);
+		act.moveToElement(getElement(type, typeValue)).perform();
+				
+	}
+	
+	public static void actionClick(String type, String typeValue)
+	{
+		Actions act = new Actions(driver);
+		act.click(getElement(type, typeValue)).perform();
+		sleep(2000);
+		
 	}
 }

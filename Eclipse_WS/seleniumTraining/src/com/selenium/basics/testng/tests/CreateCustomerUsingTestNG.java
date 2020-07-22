@@ -9,29 +9,32 @@ import com.selenium.basics.utils.ActitimeUtils;
 
 public class CreateCustomerUsingTestNG {
 
-	
 	@BeforeClass
-	public void launchAndLogin()
-	{
+	public void launchAndLogin() {
 		ActitimeUtils.getDriver();
 		ActitimeUtils.launchApp();
 		ActitimeUtils.login("admin", "manager");
 		ActitimeUtils.selectModule("tasks");
 	}
-	
 
-	@Test(dataProviderClass = TestData.class, dataProvider = "createcustomerdata")
-	public void createCustomer(String cn, String cd)
-	{
+	@Test(priority = 1, dataProviderClass = TestData.class, dataProvider = "createcustomerdata")
+	public void createCustomer(String cn, String cd) {
 		ActitimeUtils.clickOnNewCustomerButton();
 		ActitimeUtils.createCustomer(cn, cd);
 	}
-	
+
+	@Test(priority = 2,dataProviderClass = TestData.class, dataProvider = "createcustomerdata")
+	public void DeleteCustomer(String cn, String cd) {
+
+		ActitimeUtils.searchCustomerToDelete(cn);
+		ActitimeUtils.deleteCustomer();
+		ActitimeUtils.getElement("xpath", "//div[@class='customersProjectsPanel']//input").clear();
+
+	}
+
 	@AfterClass
-	public void logoutApp()
-	{
+	public void logoutApp() {
 		ActitimeUtils.logout();
 	}
-	
-	
+
 }

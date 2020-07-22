@@ -16,6 +16,8 @@ import org.testng.annotations.Test;
 
 import com.selenium.basics.testng.data.TestData;
 import com.selenium.basics.utils.ActitimeUtils;
+import com.selenium.basics.utils.DriverUtils;
+import com.selenium.basics.utils.ReaderUtils;
 
 public class LoginUsingTest {
 
@@ -48,7 +50,7 @@ public class LoginUsingTest {
 		{
 			TakesScreenshot ts = (TakesScreenshot)driver;
 			File srcFile = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(srcFile, new File("screenshots\\ss.png"));
+			FileUtils.copyFile(srcFile, new File("screenshots\\ss_" + ReaderUtils.getDateAndTime() + ".png"));
 		}
 		System.out.println("Test has failures..");
 			

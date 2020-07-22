@@ -2,6 +2,7 @@ package com.selenium.basics.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -112,6 +113,38 @@ public class ActitimeUtils extends DriverUtils {
 		sleep(2000);
 		click("id", "customerLightBox_cancelBtn");
 		driver.switchTo().alert().accept();
+		
+		
+	}
+	
+	public static void searchCustomerToDelete(String customerName)
+	{
+		type("xpath", "//div[@class='customersProjectsPanel']//input", customerName);
+		sleep(2000);
+		Actions act = new Actions(driver);
+//		act.moveToElement(getElement("xpath", "//div[@class='filteredContainer']//div[@class='itemsContainer']//span[text()='"+ customerName+"']")).perform();
+		act.moveToElement(getElement("xpath", "//div[@class='filteredContainer']//div[@class='itemsContainer']//div[@class='node customerNode notSelected']")).perform();
+		
+//		act.click(getElement("xpath", "//div[@class='filteredContainer']//div[@class='itemsContainer']//span[text()='" +customerName+ "']/parent::div/following-sibling::div")).perform();
+		act.click(getElement("xpath", "//div[@class='filteredContainer']//div[@class='itemsContainer']//div[@class='node customerNode notSelected']/div[@class='editButton available']")).perform();
+		
+		sleep(2000);
+	
+	}
+	
+	
+	public static void deleteCustomer()
+	{
+		click("xpath", "//div[@class='customerNamePlaceHolder']/following-sibling::div");
+		click("xpath","//div[@class='customerNamePlaceHolder']/parent::div/following-sibling::div[@class='dropdownContainer actionsMenu']//div[text()='Delete']");
+		click("id","customerPanel_deleteConfirm_submitTitle");
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement successMsg = wait.until(ExpectedConditions.visibilityOf(getElement("xpath", "//div[@class='toasts']")));
+		System.out.println("Success message is appeared "  + successMsg.getText());
+		WebDriverWait waitDisappear = new WebDriverWait(driver, 10);
+		waitDisappear.until(ExpectedConditions.invisibilityOf(getElement("xpath", "//div[@class='toasts']")));
+		System.out.println("Toast message disappeared!!!");
+		
 		
 		
 	}

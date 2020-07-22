@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -115,7 +116,11 @@ public class ReaderUtils extends DriverUtils {
 		
 	}
 	
-	
+	public static String getDateAndTime()
+	{
+		Date d = new Date();
+		return d.toString().replaceAll(" ", "_").replaceAll(":", "_");
+	}
 	
 	
 	
