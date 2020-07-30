@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18500" started-at="2020-07-23T23:09:46 IST" finished-at="2020-07-23T23:10:05 IST">
+  <suite name="Default suite" duration-ms="21659" started-at="2020-07-24T22:46:42 IST" finished-at="2020-07-24T22:47:03 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18500" started-at="2020-07-23T23:09:46 IST" finished-at="2020-07-23T23:10:05 IST">
-      <class name="com.ita.selenium.actitime.test.HelloWorldWD">
-        <test-method status="PASS" signature="helloTest()[pri:0, instance:com.ita.selenium.actitime.test.HelloWorldWD@26aa12dd]" name="helloTest" duration-ms="18440" started-at="2020-07-23T23:09:46 IST" finished-at="2020-07-23T23:10:05 IST">
+    <test name="ActiTime" duration-ms="21659" started-at="2020-07-24T22:46:42 IST" finished-at="2020-07-24T22:47:03 IST">
+      <class name="com.ita.selenium.actitime.test.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ita.selenium.actitime.test.LoginTest@1e965684]" name="setup" is-config="true" duration-ms="5675" started-at="2020-07-24T22:46:42 IST" finished-at="2020-07-24T22:46:47 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- helloTest -->
-      </class> <!-- com.ita.selenium.actitime.test.HelloWorldWD -->
-    </test> <!-- Default test -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.ita.selenium.actitime.test.LoginTest@1e965684]" name="loginTest" duration-ms="9469" started-at="2020-07-24T22:46:47 IST" finished-at="2020-07-24T22:46:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="verifyTasksPageTest()[pri:0, instance:com.ita.selenium.actitime.test.LoginTest@1e965684]" name="verifyTasksPageTest" duration-ms="6354" started-at="2020-07-24T22:46:57 IST" finished-at="2020-07-24T22:47:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTasksPageTest -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.ita.selenium.actitime.test.LoginTest@1e965684]" name="cleanUp" is-config="true" duration-ms="114" started-at="2020-07-24T22:47:03 IST" finished-at="2020-07-24T22:47:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.ita.selenium.actitime.test.LoginTest -->
+    </test> <!-- ActiTime -->
   </suite> <!-- Default suite -->
 </testng-results>
